@@ -1,0 +1,26 @@
+{
+  "name": "yousay.buzz",
+  "version": "0.0.1",
+  "authors": [
+    "ired <brainfuck@ired.de>"
+  ],
+  "description": "yousay.buzz",
+  "main": "main.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.5"
+  },
+  "devDependencies": {
+    "angular": "~1.4.0",
+    "angular-aria": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "normalize.css": "~3.0.3"
+  }
+}
