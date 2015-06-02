@@ -10,14 +10,20 @@
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <!-- endbuild -->
+  <base href="./">
 </head>
 <body ng-app="yousay" ng-cloak>
-<div class="video-bg"></div>
+
+<div class="embed-responsive embed-responsive-16by9" ng-controller="MessageController as vm">
+  <youtube-video player-width="'100%'" player-height="'100%'" player="bgPlayer" video-id="vm.videoId" player-vars="vm.playerVars" ></youtube-video>
+</div>
+
 <div class="container">
   <ng-view></ng-view>
 </div>
 
 
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <!-- build:js scripts/scripts.js -->
 <script src="lib/angular.js"></script>
@@ -25,11 +31,11 @@
 <script src="lib/angular-aria.js"></script>
 <script src="lib/angular-utf8-base64.js"></script>
 <script src="lib/angular-typewrite.js"></script>
+<script src="lib/angular-youtube-embed.js"></script>
 
 <script src="src/app.js"></script>
 <script src="src/message.controller.js"></script>
 <script src="src/video.controller.js"></script>
-
 <!-- endbuild -->
 </body>
 </html>

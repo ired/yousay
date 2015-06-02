@@ -33,7 +33,7 @@ gulp.task('sass', function() {
 });
 
 // Gulp assets compilation 
-gulp.task('dist:usemin', ['dist:clean', 'js'], function () {
+gulp.task('dist:usemin', ['dist:clean'], function () {
     var usemin = require('gulp-usemin');
     var uglify = require('gulp-uglify');
     var rev = require('gulp-rev');
@@ -51,7 +51,7 @@ gulp.task('dist:usemin', ['dist:clean', 'js'], function () {
 
         js: [uglify(), rev()],
         inlinejs: [uglify()],
-        html: []
+        //html: []
         // inlinecss: [minifyCss(), 'concat']
       }))
       .pipe(gulp.dest('dist'));
