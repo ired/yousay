@@ -2,80 +2,22 @@
 
 $susy: (
   columns: 12,
-  global-box-sizing: border-box
+  global-box-sizing: border-box,
+  debug: (image:hide)
   );
 
 @include border-box-sizing;
 
 body {
-  //background-color: #ececec;
+  background-color: #ccc;
 }
 
 .container {
   @include container();
 }
 
-.menu-button {
-  &.md-icon-button{
-    width: 65px;
-  }
-  md-icon {
-    width: 35px;
-    height: 35px;
-  }
+p {
+  width: span(5);
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.main-menu {
-
-  &__toolbar {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-
-    button, h1 {
-      flex-wrap: wrap;
-    }
-
-  }
-
-  md-list {
-    padding-top: 0;
-
-    a {
-        width: 100%;
-        padding: 5px 16px;
-        margin: 0;
-        text-align: left;
-    }
-    
-    md-list-item {
-      min-height: initial;
-    }
-
-  }
-}
-
-.messageform {
-  margin: 30px 10px;
-
-  form {
-    padding: 13px 15px 20px 15px;
-  }
-
-  .submit-button {
-    margin: 0;
-    margin-top: 15px;
-  }
-
-  @media (min-width: 600px) {
-    width: span(8 of 12);
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-
-
-
-

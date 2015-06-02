@@ -1,0 +1,21 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  background-color: #ccc; }
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+p {
+  width: 40.67797%;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*# sourceMappingURL=style.css.map */

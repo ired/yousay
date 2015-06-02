@@ -2,12 +2,12 @@
   'use strict';
 
   angular
-      .module('emaily')
-      .controller('VideoController', VideoController);
+    .module('yousay')
+    .controller('VideoController', VideoController);
 
   VideoController.$inject = [];
 
-  function VideoController($mdSidenav) {
+  function VideoController() {
 
     var vm = this;
 
@@ -16,7 +16,7 @@
     vm.regUrl = '#/';
     
     function toggleLeftNav() {
-      $mdSidenav('left').toggle();
+      // $mdSidenav('left').toggle();
     }
 
   }

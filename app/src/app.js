@@ -4,7 +4,9 @@
   angular
     .module('yousay',[
         'ngAria',
-        'ngRoute'
+        'ngRoute',
+        'ab-base64',
+        'angularTypewrite'
     ])
 
       .config(routeConfig)
@@ -13,15 +15,23 @@
 
       function routeConfig($routeProvider) {
             $routeProvider
-                // .when('/', {
-                //     templateUrl: 'app/msg_form/introview.html',
-                //     title: 'Send Message Anonymously'
-                // })
                 .when('/', {
                     controller: 'MessageController',
                     controllerAs: 'vm',
-                    templateUrl: 'messageform.html'
+                    templateUrl: 'DefaultMessage.html'
                 })
+                .when('/new', {
+                    controller: 'MessageController',
+                    controllerAs: 'vm',
+                    templateUrl: 'NewMessage.html'
+                }).
+                when ('/m/:message/:video', {
+                    controller: 'MessageController',
+                    controllerAs: 'vm',
+                    templateUrl: 'ShowMessage.html'
+
+                })
+
                 .otherwise({ redirectTo: '/' });
       }
 

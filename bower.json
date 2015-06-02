@@ -15,7 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "susy": "~2.2.5"
+    "susy": "~2.2.5",
+    "angular-typewrite": "~0.0.4",
+    "angular-youtube-mb": "~1.0.2"
   },
   "devDependencies": {
     "angular": "~1.4.0",
