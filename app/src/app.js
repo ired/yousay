@@ -6,8 +6,8 @@
         'ngAria',
         'ngRoute',
         'ab-base64',
-        'youtube-embed',
-        'angularTypewrite'
+        'angularTypewrite',
+        'snap'
     ])
     .config(routeConfig)
 
@@ -25,7 +25,7 @@
                   controllerAs: 'vm',
                   templateUrl: 'NewMessage.html'
               }).
-              when ('/m/:message/:videoId', {
+              when ('/m/:message', {
                   controller: 'MessageController',
                   controllerAs: 'vm',
                   templateUrl: 'ShowMessage.html'

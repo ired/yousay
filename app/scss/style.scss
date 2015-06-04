@@ -8,42 +8,72 @@ $susy: (
 
 @include border-box-sizing;
 
-body {
-  background-color: #ccc;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
 .container {
   @include container();
 }
 
-p {
-  width: span(5);
+.content-wrapper {
+  //top: 100px;
+  position: relative;
+}
+
+.message-wrapper {
+  position: relative;
+  width: 90%;
+  padding: 0 15px;
+  top: 8em;
   margin-left: auto;
   margin-right: auto;
+  @media (min-width: 480px) {
+    width: span(6);
+  }
 }
 
-.embed-responsive {
-  position: relative;
-  display: block;
-  height: 100%;
-  padding: 0;
-  overflow: hidden;
-}
+.message {
+  font-size: 4em;
+  line-height: 1em;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  word-wrap: break-word;
+  .blink {
+    color: #F52E6D !important;
+    font-size: 1.1em;
+  }
 
-.embed-responsive.embed-responsive-16by9 {
-  padding-bottom: 56.25%;
 }
-
-.embed-responsive-item {
+// 
+.debug {
   position: absolute;
+  margin: 0;
+  padding: 10;
   top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+  font-size: .9em;
+  color: #ccc;
+  z-index:-1;
 }
 
-.ytp-chrome-top {
-  display: none !important;
+/// typewrite styles
+
+@keyframes blink-it { 
+  0% { opacity:1 }
+  50% { opacity:0 }
+  100% { opacity:1 }
+}
+
+
+.blink{
+  animation:blink-it steps(1) 1s infinite
 }

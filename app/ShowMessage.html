@@ -1,4 +1,6 @@
-<p>ShowMessage here!</p>
-<p>message decoded = <span typewrite initial-delay="2s" text="vm.message"></span></p>
-<p>message decoded = {{vm.message}}</p>
-<p>video decoded = {{vm.videoId}}</p>
+<p class="debug">ShowMessage tmp!</p>
+
+
+<div class="message-wrapper">
+  <a ng-click="vm.test()" typewrite initial-delay="1s" type-delay="200" start="10" text="vm.message" class="message" ></a>
+</div>

@@ -5,25 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>yousay.buzz</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
   <!-- build:css css/styles.css -->
-  <link rel="stylesheet" href="css/angular-typewrite.css">
+  <link rel="stylesheet" href="css/angular-snap.css">
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <!-- endbuild -->
   <base href="./">
 </head>
 <body ng-app="yousay" ng-cloak>
-
-<div class="embed-responsive embed-responsive-16by9" ng-controller="MessageController as vm">
-  <youtube-video player-width="'100%'" player-height="'100%'" player="bgPlayer" video-id="vm.videoId" player-vars="vm.playerVars" ></youtube-video>
-</div>
-
 <div class="container">
-  <ng-view></ng-view>
+  <nav snap-drawer>
+    <p>I'm a drawer! I maybe I've got some sweet navigation links.</p>
+  </nav>
+  <main snap-content>
+    <button snap-toggle="left">Toggle Snap</button>
+    <ng-view class="content-wrapper"></ng-view>
+  </main>
 </div>
 
-
-<script src="https://www.youtube.com/iframe_api"></script>
 
 <!-- build:js scripts/scripts.js -->
 <script src="lib/angular.js"></script>
@@ -31,11 +31,11 @@
 <script src="lib/angular-aria.js"></script>
 <script src="lib/angular-utf8-base64.js"></script>
 <script src="lib/angular-typewrite.js"></script>
-<script src="lib/angular-youtube-embed.js"></script>
+<script src="lib/snap.js"></script>
+<script src="lib/angular-snap.js"></script>
 
 <script src="src/app.js"></script>
-<script src="src/message.controller.js"></script>
-<script src="src/video.controller.js"></script>
+<script src="src/Message.Controller.js"></script>
 <!-- endbuild -->
 </body>
 </html>

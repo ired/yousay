@@ -24,7 +24,7 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ['> 1%', 'last 5 versions', 'Firefox ESR'],
             cascade: false
         }))
         .pipe(sourcemaps.write('.'))
@@ -44,7 +44,7 @@ gulp.task('dist:usemin', ['dist:clean'], function () {
       .pipe(usemin({
         css: [  
                 sass({outputStyle: 'compressed'}),
-                uncss({html: ['app/**/*.html'],ignoreSheets:['app/css/normalize.css']}),
+                uncss({html: ['app/**/*.html'],ignoreSheets:['app/css/normalize.css','app/css/angular-snap.css']}),
                 csso(),
                 rev()
             ],
@@ -67,7 +67,8 @@ gulp.task('dist:clean', function(cb) {
     var del = require('del');
 
     del([
-        'dist/*'
+        'dist/*',
+        'app/css/**/*'
         ], cb);
 });
 
