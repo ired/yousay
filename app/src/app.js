@@ -7,32 +7,54 @@
         'ngRoute',
         'ab-base64',
         'angularTypewrite',
-        'snap'
+        'snap',
+        'luegg.directives',
     ])
-    .config(routeConfig)
+    .config(['$routeProvider', 'snapRemoteProvider',
+      function($routeProvider, snapRemoteProvider) {
 
-    routeConfig.$inject = ['$routeProvider', '$locationProvider'];
+        $routeProvider
+            .when('/', {
+                controller: 'MessageController',
+                controllerAs: 'vm',
+                templateUrl: 'showMessage.html'
+            })
+            .when('/new', {
+                controller: 'MessageController',
+                controllerAs: 'vm',
+                templateUrl: 'newMessage.html'
+            })
+            .when ('/m/:message', {
+                controller: 'MessageController',
+                controllerAs: 'vm',
+                templateUrl: 'showMessage.html'
+            })
+            .when ('/share', {
+                controller: 'ShareController',
+                controllerAs: 'share',
+                templateUrl: 'shareMessage.html'
+            })
+            .otherwise({ redirectTo: '/' });
 
-    function routeConfig($routeProvider, $locationProvider) {
-          $routeProvider
-              .when('/', {
-                  controller: 'MessageController',
-                  controllerAs: 'vm',
-                  templateUrl: 'DefaultMessage.html'
-              })
-              .when('/new', {
-                  controller: 'MessageController',
-                  controllerAs: 'vm',
-                  templateUrl: 'NewMessage.html'
-              }).
-              when ('/m/:message', {
-                  controller: 'MessageController',
-                  controllerAs: 'vm',
-                  templateUrl: 'ShowMessage.html'
 
-              })
+            snapRemoteProvider.globalOptions = {
+              disable: 'right',
+              tapToClose: true,
+              addBodyClasses: false,
+              maxPosition: 250
+            }
 
-              .otherwise({ redirectTo: '/' });
-    }
+    }])
+    .run(['$rootScope', '$location', 
+      function($rootScope,$location) {
+        var re = /\w+/i,
+            bodyPathClass;
+
+        $rootScope.$on('$routeChangeSuccess', function(ev, data) {
+          bodyPathClass = $location.path().match(re) || 'i';
+          $rootScope.bodyPathClass = bodyPathClass[0];
+       });
+
+    }]);
 
 })();

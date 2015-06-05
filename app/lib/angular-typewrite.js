@@ -48,8 +48,7 @@ angular
         function linkFunction($scope, $element, $attrs) {
             var timer = null,
                 initialDelay = $attrs.initialDelay ? getTypeDelay($attrs.initialDelay) : 200,
-                pause = $attrs.pause || 800, // type pause after PauseChars
-                pauseChars = (' ' || ',' || ';' || '.' || '-' || ':' || '!' || '?'), 
+                pause = $attrs.pause || 800,
                 typeDelay = $attrs.typeDelay || 200,
                 eraseDelay = $attrs.eraseDelay || typeDelay / 2,
                 blinkDelay = $attrs.blinkDelay ? getAnimationDelay($attrs.blinkDelay) : false,
@@ -97,7 +96,7 @@ angular
                            isPauseChar === '-' ||
                            isPauseChar === ':' ||
                            isPauseChar === '!' ||
-                           isPauseChar === '?') ? pause : typeDelay; // make a longer delay after pauseChars
+                           isPauseChar === '?') ? pause : typeDelay;
 
                   timer = $timeout(function () {
                       updateIt(element, charIndex, arrIndex, text);

@@ -1,15 +1,20 @@
 *, *:before, *:after {
   box-sizing: border-box; }
 
+.cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #fff;
   font-family: 'Roboto', sans-serif;
-  font-weight: bold; }
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased; }
 
 .container {
   max-width: 100%;
@@ -20,39 +25,162 @@ html, body {
     display: block;
     clear: both; }
 
-.content-wrapper {
-  position: relative; }
+.snap-content {
+  background-color: #fff;
+  padding-bottom: 100px; }
+  .new .snap-content {
+    background-color: #47a3da; }
+  .share .snap-content {
+    background-color: #90b912; }
+
+.snap-drawer {
+  background-color: #000;
+  padding: 15px;
+  color: #fff; }
+  .snap-drawer .description {
+    margin: 0 auto 3.5em auto;
+    text-align: center;
+    color: #fff; }
+
+.logo-h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 20px 0 5px 0; }
+  .logo-h1 > a:link, .logo-h1 > a:visited, .logo-h1 > a:hover, .logo-h1 > a:focus, .logo-h1 > a:active {
+    text-decoration: none;
+    color: #f52e6d; }
+
+.menu {
+  text-align: center;
+  list-style-type: none;
+  font-size: 2.7em;
+  padding: 0;
+  margin: 0; }
+  .menu li {
+    margin-bottom: 30px; }
+  .menu a {
+    border-bottom: 5px solid #f52e6d; }
+    .menu a:link, .menu a:visited, .menu a:hover, .menu a:focus, .menu a:active {
+      text-decoration: none;
+      color: #fff; }
+
+.content-view {
+  position: relative;
+  top: 1.5em; }
+  @media (min-width: 420px) {
+    .content-view {
+      top: 3em; } }
+  @media (min-width: 768px) {
+    .content-view {
+      top: 5em; } }
 
 .message-wrapper {
   position: relative;
-  width: 90%;
+  width: 100%;
   padding: 0 15px;
-  top: 8em;
   margin-left: auto;
   margin-right: auto; }
-  @media (min-width: 480px) {
+  @media (min-width: 420px) {
     .message-wrapper {
-      width: 49.15254%; } }
+      width: 83.05085%; } }
+  @media (min-width: 768px) {
+    .message-wrapper {
+      width: 66.10169%; } }
 
 .message {
-  font-size: 4em;
+  font-size: 3.4em;
   line-height: 1em;
   text-decoration: none;
   color: #000;
   cursor: pointer;
   word-wrap: break-word; }
   .message .blink {
-    color: #F52E6D !important;
+    color: #f52e6d;
     font-size: 1.1em; }
+  @media (min-width: 420px) {
+    .message {
+      font-size: 4em; } }
+  @media (min-width: 768px) {
+    .message {
+      font-size: 4.5em; } }
 
-.debug {
-  position: absolute;
-  margin: 0;
-  padding: 10;
-  top: 0;
-  font-size: .9em;
-  color: #ccc;
-  z-index: -1; }
+.menu_button {
+  background-color: #f52e6d;
+  position: relative;
+  border: none;
+  width: 48px;
+  height: 45px;
+  text-indent: -900em;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  margin: 15px; }
+  .menu_button:after {
+    content: '';
+    position: absolute;
+    width: 68%;
+    height: 5px;
+    background: #fff;
+    top: 10px;
+    left: 16%;
+    box-shadow: 0 10px 0 #fff, 0 20px 0 #fff; }
+  .new .menu_button {
+    background-color: #90b912; }
+  .share .menu_button {
+    background-color: #744783; }
+
+.form-wrapper {
+  width: 100%;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto; }
+  .form-wrapper form {
+    display: inline-block;
+    font-size: 3.4em;
+    line-height: 1em;
+    text-decoration: none;
+    color: #fff;
+    width: 100%; }
+    .form-wrapper form label {
+      display: inline-block;
+      margin-bottom: 25px; }
+    .form-wrapper form textarea {
+      padding: 15px;
+      width: 100%;
+      border: 5px solid #fff;
+      background: transparent;
+      display: block; }
+      .form-wrapper form textarea:focus {
+        outline: none; }
+    .form-wrapper form button {
+      font-size: .9em;
+      background-color: #f52e6d;
+      border: none;
+      color: #fff;
+      width: auto;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 2px;
+      margin: 15px 0 0 0; }
+    @media (min-width: 420px) {
+      .form-wrapper form {
+        font-size: 4em; } }
+    @media (min-width: 768px) {
+      .form-wrapper form {
+        font-size: 4.5em; } }
+  .form-wrapper .input_count {
+    float: right;
+    font-size: .5em;
+    line-height: .7em;
+    margin: 15px 0 0 0; }
+  @media (min-width: 420px) {
+    .form-wrapper {
+      width: 83.05085%; } }
+  @media (min-width: 768px) {
+    .form-wrapper {
+      width: 66.10169%; } }
 
 @-webkit-keyframes blink-it {
   0% {

@@ -1,6 +1,8 @@
-<p class="debug">ShowMessage tmp!</p>
+<div class="message-wrapper" >
 
+  <div ng-click="nav.locationSwith('/new/')" typewrite type-delay="20" pause="100" text="vm.message" class="message" title=""></div>
 
-<div class="message-wrapper">
-  <a ng-click="vm.test()" typewrite initial-delay="1s" type-delay="200" start="10" text="vm.message" class="message" ></a>
+  <button ng-click="vm.reloadView()">again</button>
+  <a ng-href="#/share">share</a>
+
 </div>

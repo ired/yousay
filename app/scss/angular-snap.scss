@@ -38,7 +38,8 @@ snap-drawer,
   transition: top 0.2s linear;
   transition: bottom 0.2s linear;
   overflow-scrolling: touch;
-  width: 265px;
+  // width: 265px;
+  width: 250px;
 }
 .snap-content {
   z-index: 2;

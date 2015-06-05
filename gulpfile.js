@@ -58,8 +58,8 @@ gulp.task('dist:usemin', ['dist:clean'], function () {
 });
 
 // Copy image assets without modification
-gulp.task('dist:images', ['dist:clean'], function() {
-    return gulp.src('app/images/**/*', { base: 'app' })
+gulp.task('dist:assets', ['dist:clean'], function() {
+    return gulp.src('app/assets/**/*', { base: 'app' })
         .pipe(gulp.dest('dist'));
 });
 
@@ -76,5 +76,5 @@ gulp.task('default',['serve']);
 gulp.task('build',[ 
                     'dist:clean', 
                     'dist:usemin',
-                    'dist:images' 
+                    'dist:assets' 
                     ]);

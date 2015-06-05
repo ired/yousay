@@ -18,7 +18,8 @@
     "susy": "~2.2.5",
     "angular-typewrite": "~0.0.4",
     "angular-youtube-mb": "~1.0.2",
-    "angular-snap": "~1.8.1"
+    "angular-snap": "~1.8.1",
+    "angular-scroll-glue": "~2.0.5"
   },
   "devDependencies": {
     "angular": "~1.4.0",

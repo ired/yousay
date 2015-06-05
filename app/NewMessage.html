@@ -1,6 +1,14 @@
-<p class="debug">NewMessage tmp!</p>
-<form>
-  <input type="text" ng-model="vm.inputMessage">
-  <button type="submit" ng-click="vm.newMessage()">submit</button>
-</form>
-<p>NewMessage decoded text = {{vm.inputMessage}}</p>
+<div class="form-wrapper">  
+  <form class="cf">
+    <div>
+    <label for="bold_message">Your bold message</label>
+    <textarea id="bold_message" type="text" ng-model="vm.inputMessage" maxlength="140" rows="3" placeholder="..."></textarea>
+</div>
+    
+    <div class="input_count">{{ vm.inputMessage.length }} of 140</div>
+    <button type="submit" ng-click="vm.writeNewMessage()">Say it</button>
+  
+  </form>
+
+</div>
+
