@@ -182,6 +182,10 @@ html, body {
     .form-wrapper {
       width: 66.10169%; } }
 
+.share-wrapper {
+  color: #fff;
+  padding: 0 15px; }
+
 @-webkit-keyframes blink-it {
   0% {
     opacity: 1; }

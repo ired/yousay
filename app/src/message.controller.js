@@ -15,12 +15,11 @@
 
     vm.writeNewMessage = writeNewMessage;
     vm.message = messageFactory.messageObj.message || 'I love hamburgers, and I love you!';
-    vm.inputPlaceholder = messageFactory.messageObj.message;
     vm.reloadView = reloadView;
     vm.inputMessage = '';
 
     messageFactory.messageObj.message = vm.message;
-    messageFactory.saveUrl(vm.message);
+    //messageFactory.saveUrl(vm.message);
 
     function writeNewMessage() {
       messageFactory.changeUrl(vm.inputMessage);
