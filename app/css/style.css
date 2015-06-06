@@ -14,7 +14,14 @@ html, body {
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px; }
+
+a {
+  border-bottom: 2px solid #f52e6d; }
+  a:link, a:visited, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: #000; }
 
 .container {
   max-width: 100%;
@@ -46,9 +53,11 @@ html, body {
   text-align: center;
   font-size: 3em;
   margin: 20px 0 5px 0; }
-  .logo-h1 > a:link, .logo-h1 > a:visited, .logo-h1 > a:hover, .logo-h1 > a:focus, .logo-h1 > a:active {
-    text-decoration: none;
-    color: #f52e6d; }
+  .logo-h1 > a {
+    border: none; }
+    .logo-h1 > a:link, .logo-h1 > a:visited, .logo-h1 > a:hover, .logo-h1 > a:focus, .logo-h1 > a:active {
+      text-decoration: none;
+      color: #f52e6d; }
 
 .menu {
   text-align: center;
@@ -58,38 +67,48 @@ html, body {
   margin: 0; }
   .menu li {
     margin-bottom: 30px; }
-  .menu a {
-    border-bottom: 5px solid #f52e6d; }
-    .menu a:link, .menu a:visited, .menu a:hover, .menu a:focus, .menu a:active {
-      text-decoration: none;
-      color: #fff; }
+    .menu li a {
+      border-bottom: 5px solid #47a3da; }
+      .menu li a:link, .menu li a:visited, .menu li a:hover, .menu li a:focus, .menu li a:active {
+        text-decoration: none;
+        color: #fff; }
+    .menu li:nth-child(2) a {
+      border-bottom: 5px solid #90b912; }
 
 .content-view {
-  position: relative;
-  top: 1.5em; }
+  position: relative; }
+
+.message-wrapper,
+.form-wrapper,
+.share-wrapper {
+  display: block;
+  top: 35px;
+  font-size: 3.4em;
+  line-height: 1.1em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px; }
   @media (min-width: 420px) {
-    .content-view {
-      top: 3em; } }
+    .message-wrapper,
+    .form-wrapper,
+    .share-wrapper {
+      font-size: 4em;
+      top: 45px;
+      width: 83.05085%; } }
   @media (min-width: 768px) {
-    .content-view {
-      top: 5em; } }
+    .message-wrapper,
+    .form-wrapper,
+    .share-wrapper {
+      font-size: 4.5em;
+      top: 55px;
+      width: 66.10169%; } }
 
 .message-wrapper {
   position: relative;
-  width: 100%;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto; }
-  @media (min-width: 420px) {
-    .message-wrapper {
-      width: 83.05085%; } }
-  @media (min-width: 768px) {
-    .message-wrapper {
-      width: 66.10169%; } }
+  padding: 0 15px; }
 
 .message {
-  font-size: 3.4em;
-  line-height: 1em;
   text-decoration: none;
   color: #000;
   cursor: pointer;
@@ -97,12 +116,6 @@ html, body {
   .message .blink {
     color: #f52e6d;
     font-size: 1.1em; }
-  @media (min-width: 420px) {
-    .message {
-      font-size: 4em; } }
-  @media (min-width: 768px) {
-    .message {
-      font-size: 4.5em; } }
 
 .menu_button {
   background-color: #f52e6d;
@@ -130,61 +143,47 @@ html, body {
   .share .menu_button {
     background-color: #744783; }
 
-.form-wrapper {
-  width: 100%;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto; }
-  .form-wrapper form {
+.form-wrapper form {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  width: 100%; }
+  .form-wrapper form label {
     display: inline-block;
-    font-size: 3.4em;
-    line-height: 1em;
-    text-decoration: none;
+    margin-bottom: 15px; }
+  .form-wrapper form textarea {
+    padding: 15px;
+    width: 100%;
+    border: 5px solid #fff;
+    background: transparent;
+    display: block; }
+    .form-wrapper form textarea:focus {
+      outline: none; }
+  .form-wrapper form button {
+    font-size: .9em;
+    background-color: #f52e6d;
+    border: none;
     color: #fff;
-    width: 100%; }
-    .form-wrapper form label {
-      display: inline-block;
-      margin-bottom: 25px; }
-    .form-wrapper form textarea {
-      padding: 15px;
-      width: 100%;
-      border: 5px solid #fff;
-      background: transparent;
-      display: block; }
-      .form-wrapper form textarea:focus {
-        outline: none; }
-    .form-wrapper form button {
-      font-size: .9em;
-      background-color: #f52e6d;
-      border: none;
-      color: #fff;
-      width: auto;
-      cursor: pointer;
-      display: inline-block;
-      padding: 10px 25px;
-      border-radius: 2px;
-      margin: 15px 0 0 0; }
-    @media (min-width: 420px) {
-      .form-wrapper form {
-        font-size: 4em; } }
-    @media (min-width: 768px) {
-      .form-wrapper form {
-        font-size: 4.5em; } }
-  .form-wrapper .input_count {
-    float: right;
-    font-size: .5em;
-    line-height: .7em;
+    width: auto;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 2px;
     margin: 15px 0 0 0; }
-  @media (min-width: 420px) {
-    .form-wrapper {
-      width: 83.05085%; } }
-  @media (min-width: 768px) {
-    .form-wrapper {
-      width: 66.10169%; } }
+
+.form-wrapper .input_count {
+  float: right;
+  font-size: .5em;
+  line-height: .7em;
+  margin: 15px 0 0 0; }
 
 .share-wrapper {
-  color: #fff;
-  padding: 0 15px; }
+  color: #fff; }
+  .share-wrapper .no_say {
+    font-size: 1em; }
+  .share-wrapper p {
+    margin: 0;
+    padding: 0; }
 
 @-webkit-keyframes blink-it {
   0% {
@@ -205,5 +204,8 @@ html, body {
 .blink {
   -webkit-animation: blink-it steps(1) 1s infinite;
   animation: blink-it steps(1) 1s infinite; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,11 +1,16 @@
 <div class="share-wrapper">
   
-  <p>
-    your message: {{ share.message }}
-  </p>
-  <p>
-    your share link: <a href="{{ share.shareUrl }}">{{ share.shareUrl }}</a> 
-  </p>
+  <div class="no_say">
+    <p>Oops, You have no messages to share. <a href="#/new/">Say</a> something.</p>
+  </div>
+  <div class="share" ng-show="share.shareUrl">
+    <p>
+      your message: {{ share.message }}
+    </p>
+    <p>
+      your share link: <a href="{{ share.shareUrl }}">{{ share.shareUrl }}</a> 
+    </p>
+  </div>
 
 </div>
 

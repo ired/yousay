@@ -15,7 +15,7 @@
 </head>
 
 
-<body ng-app="yousay" class="{{bodyPathClass}}" ng-cloak>
+<body ng-app="yousay" class="{{bodyPathClass[0]}}" ng-cloak>
 
 
 <div class="container" ng-controller="NavController as nav">
@@ -28,9 +28,10 @@
     </ul>
   </nav>
 
-  <main snap-content scroll-glue>
+  
+  <main snap-content scroll-glue="bodyPathClass[1]">
     <button snap-toggle="left" class="menu_button">Open Menu</button>
-    <ng-view class="content-view"></ng-view>
+      <div ng-view class="content-view"></div>
   </main>
 </div>
 

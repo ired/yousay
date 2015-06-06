@@ -48,11 +48,15 @@
     .run(['$rootScope', '$location', 
       function($rootScope,$location) {
         var re = /\w+/i,
-            bodyPathClass;
+            bodyPathClass = [];
 
         $rootScope.$on('$routeChangeSuccess', function(ev, data) {
-          bodyPathClass = $location.path().match(re) || 'i';
-          $rootScope.bodyPathClass = bodyPathClass[0];
+          bodyPathClass = $location.path().match(re) || ['i'];
+
+          // [bodyClass, true/false]. true or false for scroll-glue directive
+          $rootScope.bodyPathClass = [ bodyPathClass[0],
+                                      (bodyPathClass[0] === 'm'||bodyPathClass[0] === 'i') || false ];
+
        });
 
     }]);

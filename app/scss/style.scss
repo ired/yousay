@@ -31,6 +31,16 @@ html, body {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+a {
+    border-bottom: 2px solid $sayColor;
+    
+    &:link, &:visited, &:hover, &:focus, &:active {
+      text-decoration: none;
+      color: #000;
+    }
 }
 
 .container {
@@ -66,6 +76,7 @@ html, body {
   margin: 20px 0 5px 0;
   //padding-bottom: 15px;
   > a {
+    border: none;
     &:link, &:visited, &:hover, &:focus, &:active {
       text-decoration: none;
       color: $sayColor;
@@ -86,46 +97,60 @@ html, body {
 
   li {
     margin-bottom: 30px;
-  }
-
-  a {
-      border-bottom: 5px solid $sayColor;
-    &:link, &:visited, &:hover, &:focus, &:active {
-      text-decoration: none;
-      color: #fff;
+    
+    a {
+        border-bottom: 5px solid #47a3da;
+      &:link, &:visited, &:hover, &:focus, &:active {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+    
+    &:nth-child(2) {
+      a {
+        border-bottom: 5px solid #90b912;
+      }
     }
   }
+
 }
-
-
 .content-view {
   position: relative;
-  top: 1.5em;
+}
+
+.message-wrapper, 
+.form-wrapper, 
+.share-wrapper {
+  display: block;
+  top: 35px;
+  font-size: 3.4em;
+  line-height: 1.1em;
+
+  width: $mobileWidth;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0 15px;
+
   @media (min-width: 420px) {
-    top: 3em;
+    font-size: 4em;
+    top: 45px;
+    width: $mobilePlusWidth;
   }
   @media (min-width: 768px) {
-    top: 5em;
+    font-size: 4.5em;
+    top: 55px;
+    width: $bigWidth;
   }
 }
 
 .message-wrapper {
   position: relative;
-  width: $mobileWidth;
   padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
-  @media (min-width: 420px) {
-    width: $mobilePlusWidth;
-  }
-  @media (min-width: 768px) {
-    width: $bigWidth;
-  }
 }
 
 .message {
-  font-size: 3.4em;
-  line-height: 1em;
   text-decoration: none;
   color: #000;
   cursor: pointer;
@@ -133,12 +158,6 @@ html, body {
   .blink {
     color: $sayColor;
     font-size: 1.1em;
-  }
-  @media (min-width: 420px) {
-    font-size: 4em;
-  }
-  @media (min-width: 768px) {
-    font-size: 4.5em;
   }
 }
 
@@ -180,22 +199,16 @@ html, body {
 }
 
 .form-wrapper {
-  width: $mobileWidth;
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
 
   form {
     display: inline-block;
-    font-size: 3.4em;
-    line-height: 1em;
     text-decoration: none;
     color: #fff;
     width: 100%;
 
     label {
       display: inline-block;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
     textarea {
@@ -219,16 +232,9 @@ html, body {
       width: auto;
       cursor: pointer;
       display: inline-block;
-      padding: 10px 25px;
+      padding: 5px 15px;
       border-radius: 2px;
       margin: 15px 0 0 0;
-    }
-
-    @media (min-width: 420px) {
-      font-size: 4em;
-    }
-    @media (min-width: 768px) {
-      font-size: 4.5em;
     }
   }
 
@@ -239,18 +245,18 @@ html, body {
     margin: 15px 0 0 0;
     // margin: -45px 10px 0 0;
   }
-
-  @media (min-width: 420px) {
-    width: $mobilePlusWidth;
-  }
-  @media (min-width: 768px) {
-    width: $bigWidth;
-  }
 }
 
 .share-wrapper {
   color: #fff;
-  padding: 0 15px;
+
+  .no_say{
+    font-size: 1em;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 
@@ -264,4 +270,9 @@ html, body {
 
 .blink{
   animation:blink-it steps(1) 1s infinite
+}
+
+// angular rule
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }

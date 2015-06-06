@@ -12,9 +12,9 @@
     var nav = this;
 
     nav.locationSwith = locationSwith;
-    nav.closeMenu = closeMenu;
+    
 
-    $rootScope.$on('$routeChangeSuccess', closeMenu);
+    $rootScope.$on('$routeChangeSuccess', utilsOnRouteChange);
 
 
     function locationSwith(path) {
@@ -22,10 +22,9 @@
     }
 
 
-    function closeMenu() {
+    function utilsOnRouteChange() {
       snapRemote.close();
     }
-
 
   }
 })();
