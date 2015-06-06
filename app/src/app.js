@@ -29,7 +29,7 @@
                 controllerAs: 'vm',
                 templateUrl: 'showMessage.html'
             })
-            .when ('/share', {
+            .when ('/share/', {
                 controller: 'ShareController',
                 controllerAs: 'share',
                 templateUrl: 'shareMessage.html'

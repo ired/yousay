@@ -121,16 +121,16 @@ a {
 .message-wrapper, 
 .form-wrapper, 
 .share-wrapper {
+  position: relative;
   display: block;
   top: 35px;
   font-size: 3.4em;
-  line-height: 1.1em;
+  line-height: 1em;
 
   width: $mobileWidth;
 
   margin-left: auto;
   margin-right: auto;
-
   padding: 0 15px;
 
   @media (min-width: 420px) {
@@ -139,15 +139,10 @@ a {
     width: $mobilePlusWidth;
   }
   @media (min-width: 768px) {
-    font-size: 4.5em;
+    font-size: 5em;
     top: 55px;
     width: $bigWidth;
   }
-}
-
-.message-wrapper {
-  position: relative;
-  padding: 0 15px;
 }
 
 .message {
@@ -184,12 +179,6 @@ a {
     box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
   }
 
-  // &:hover {
-  //   background-color: #00A815;
-  // }
-  // &:active {
-  //   top: 1px;
-  // }
   .new & {
     background-color: #90b912;
   }
@@ -249,13 +238,42 @@ a {
 
 .share-wrapper {
   color: #fff;
-
+  line-height: 1.1em;
   .no_say{
     font-size: 1em;
   }
+
+  .share {
+    h2 {
+      font-size: 1em;
+      line-height: 1em;
+      color: #744783;
+      padding: 0;
+      margin: 0;
+      &+p{
+        font-size: .9em;
+      }
+    }
+
+    h3 {
+      font-size: .9em;
+      line-height: 1em;
+      color: yellow;
+      margin: 0;
+      &+p{
+        font-size: .8em;
+        
+      }
+    }
+
+    a {
+      word-wrap: break-word;
+    }
+  }
+
   p {
     margin: 0;
-    padding: 0;
+    padding: 0 0 25px 0;
   }
 }
 

@@ -81,10 +81,11 @@ a {
 .message-wrapper,
 .form-wrapper,
 .share-wrapper {
+  position: relative;
   display: block;
   top: 35px;
   font-size: 3.4em;
-  line-height: 1.1em;
+  line-height: 1em;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -100,13 +101,9 @@ a {
     .message-wrapper,
     .form-wrapper,
     .share-wrapper {
-      font-size: 4.5em;
+      font-size: 5em;
       top: 55px;
       width: 66.10169%; } }
-
-.message-wrapper {
-  position: relative;
-  padding: 0 15px; }
 
 .message {
   text-decoration: none;
@@ -178,12 +175,30 @@ a {
   margin: 15px 0 0 0; }
 
 .share-wrapper {
-  color: #fff; }
+  color: #fff;
+  line-height: 1.1em; }
   .share-wrapper .no_say {
     font-size: 1em; }
+  .share-wrapper .share h2 {
+    font-size: 1em;
+    line-height: 1em;
+    color: #744783;
+    padding: 0;
+    margin: 0; }
+    .share-wrapper .share h2 + p {
+      font-size: .9em; }
+  .share-wrapper .share h3 {
+    font-size: .9em;
+    line-height: 1em;
+    color: yellow;
+    margin: 0; }
+    .share-wrapper .share h3 + p {
+      font-size: .8em; }
+  .share-wrapper .share a {
+    word-wrap: break-word; }
   .share-wrapper p {
     margin: 0;
-    padding: 0; }
+    padding: 0 0 25px 0; }
 
 @-webkit-keyframes blink-it {
   0% {

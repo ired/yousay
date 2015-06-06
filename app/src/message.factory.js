@@ -26,6 +26,7 @@
 
 
     function readUrl(encodedMessage) {
+      _messageObj.encodedMessage = encodedMessage; 
       _messageObj.message = decodeBase64Url(encodedMessage);
       return _messageObj.message;
     }
