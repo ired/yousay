@@ -5,14 +5,16 @@
     .module('yousay')
     .controller('ShareController', ShareController);
 
-  ShareController.$inject = ['messageFactory'];
+  ShareController.$inject = ['$routeParams', 'messageFactory'];
 
-  function ShareController(messageFactory) {
+  function ShareController($routeParams, messageFactory) {
 
     var share = this;
 
-    share.message = messageFactory.messageObj.message;
-    share.shareUrl = messageFactory.messageObj.shareUrl;
+    share.message = messageFactory.messageObj.message || messageFactory.readUrl($routeParams.message);
+    share.shareUrl = messageFactory.messageObj.shareUrl || messageFactory.saveUrl($routeParams.message);
 
+    console.log(share.message);
+    console.log(share.shareUrl);
   }
 })();

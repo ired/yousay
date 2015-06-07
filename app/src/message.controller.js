@@ -10,11 +10,10 @@
   function MessageController($scope, messageFactory, $routeParams, $route) {
 
     var vm = this;
-    
-    messageFactory.readUrl($routeParams.message)
+
 
     vm.writeNewMessage = writeNewMessage;
-    vm.message = messageFactory.messageObj.message || 'I love hamburgers, and I love you!';
+    vm.message = messageFactory.readUrl($routeParams.message) || 'I love hamburgers, and I love you!';
     vm.reloadView = reloadView;
     vm.inputMessage = '';
 
@@ -24,7 +23,7 @@
     function writeNewMessage() {
       messageFactory.changeUrl(vm.inputMessage);
       messageFactory.saveUrl();
-      return;
+      console.log('msgmsg1: '+messageFactory.messageObj.encodedMessage);
     }
 
     function reloadView() {

@@ -12,12 +12,12 @@
     var _messageObj = {};
 
     var service = {
-      messageObj      : _messageObj,
-      readUrl         : readUrl,
-      saveUrl         : saveUrl,
-      changeUrl       : changeUrl,
-      encodeBase64Url : encodeBase64Url,
-      decodeBase64Url : decodeBase64Url,
+      messageObj         : _messageObj,
+      readUrl            : readUrl,
+      saveUrl            : saveUrl,
+      changeUrl          : changeUrl,
+      encodeBase64Url    : encodeBase64Url,
+      decodeBase64Url    : decodeBase64Url,
     };
 
     return service;
@@ -26,23 +26,29 @@
 
 
     function readUrl(encodedMessage) {
-      _messageObj.encodedMessage = encodedMessage; 
       _messageObj.message = decodeBase64Url(encodedMessage);
       return _messageObj.message;
     }
 
 
     function changeUrl(message) {
-      var messageEncoded = encodeBase64Url(message);
-      return $location.path('/m/'+ messageEncoded);
+      _messageObj.encodedMessage = encodeBase64Url(message);
+      return $location.path('/m/'+ _messageObj.encodedMessage);
     }
 
 
     function saveUrl(message) {
-      var defaultUrl;
+      var location = $location.absUrl(),
+          defaultUrl,
+          re;
       
-      defaultUrl = message ? $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/#/m/' + encodeBase64Url(message) : '';
-      _messageObj.shareUrl = defaultUrl || $location.absUrl() ;
+      if (message) {
+        re = /share/;
+        defaultUrl = location.replace(re,'m');
+      }
+      
+      _messageObj.shareUrl = defaultUrl || location;
+
       return _messageObj.shareUrl;
     }
 

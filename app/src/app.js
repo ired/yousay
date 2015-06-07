@@ -34,6 +34,11 @@
                 controllerAs: 'share',
                 templateUrl: 'shareMessage.html'
             })
+            .when ('/share/:message', {
+                controller: 'ShareController',
+                controllerAs: 'share',
+                templateUrl: 'shareMessage.html'
+            })
             .otherwise({ redirectTo: '/' });
 
 

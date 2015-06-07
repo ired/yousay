@@ -184,7 +184,8 @@ a {
   .share-wrapper .no_say {
     font-size: 1em; }
   .share-wrapper .share {
-    margin: 0; }
+    margin: 0;
+    word-wrap: break-word; }
     .share-wrapper .share dt {
       font-size: 1em;
       line-height: 1em;
@@ -192,11 +193,11 @@ a {
       padding: 0;
       margin: 0 0 15px 0; }
       .share-wrapper .share dt + dd {
-        font-size: .7em;
+        font-size: .6em;
         line-height: 1em;
-        margin: 0 0 30px 0; }
+        margin: 0 0 50px 0; }
     .share-wrapper .share dt:nth-of-type(2) {
-      font-size: .9em;
+      font-size: .8em;
       line-height: 1em;
       color: yellow; }
       .share-wrapper .share dt:nth-of-type(2) + dd {
@@ -206,8 +207,7 @@ a {
         border-radius: 2px;
         padding: 15px; }
     .share-wrapper .share a {
-      border-bottom: 4px solid #48a5db;
-      word-wrap: break-word; }
+      border-bottom: 4px solid #48a5db; }
 
 @-webkit-keyframes blink-it {
   0% {
