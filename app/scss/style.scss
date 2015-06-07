@@ -10,7 +10,9 @@ $susy: (
 $mobileWidth: 100%;
 $mobilePlusWidth: span(10);
 $bigWidth: span(8);
-$sayColor: hsla(341,91%,57%,1);
+$mainColor: hsla(341,91%,57%,1);
+$sayColor: hsl(202, 67%, 57%);
+$shareColor: hsl(75, 82%, 40%);
 
 
 @include border-box-sizing;
@@ -32,10 +34,16 @@ html, body {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
+  &.new {
+    background-color: $sayColor;
+  }
+  &.share {
+    background-color: $shareColor;
+  }
 }
 
 a {
-    border-bottom: 2px solid $sayColor;
+    border-bottom: 4px solid $mainColor;
     
     &:link, &:visited, &:hover, &:focus, &:active {
       text-decoration: none;
@@ -52,10 +60,10 @@ a {
   padding-bottom: 100px;
   //box-shadow: 1px 0 7px black;
   .new & {
-    background-color: #47a3da;
+    background-color: $sayColor;
   }
   .share & {
-    background-color: #90b912;
+    background-color: $shareColor;
   }
 }
 
@@ -79,7 +87,7 @@ a {
     border: none;
     &:link, &:visited, &:hover, &:focus, &:active {
       text-decoration: none;
-      color: $sayColor;
+      color: $mainColor;
     }
   } 
 }
@@ -99,7 +107,7 @@ a {
     margin-bottom: 30px;
     
     a {
-        border-bottom: 5px solid #47a3da;
+        border-bottom: 5px solid $sayColor;
       &:link, &:visited, &:hover, &:focus, &:active {
         text-decoration: none;
         color: #fff;
@@ -108,7 +116,7 @@ a {
     
     &:nth-child(2) {
       a {
-        border-bottom: 5px solid #90b912;
+        border-bottom: 5px solid $shareColor;
       }
     }
   }
@@ -151,13 +159,13 @@ a {
   cursor: pointer;
   word-wrap: break-word;
   .blink {
-    color: $sayColor;
+    color: $mainColor;
     font-size: 1.1em;
   }
 }
 
 .menu_button {
-  background-color: $sayColor;
+  background-color: $mainColor;
   position: relative;
   border: none;
   width: 48px;
@@ -180,7 +188,7 @@ a {
   }
 
   .new & {
-    background-color: #90b912;
+    background-color: $shareColor;
   }
   .share & {
     background-color: #744783;
@@ -215,7 +223,7 @@ a {
     button {
       font-size: .9em;
       // background-color: #10689a;
-      background-color: $sayColor;
+      background-color: $mainColor;
       border: none;
       color: #fff;
       width: auto;
@@ -244,37 +252,39 @@ a {
   }
 
   .share {
-    h2 {
+    margin: 0;
+    dt{
       font-size: 1em;
       line-height: 1em;
       color: #744783;
       padding: 0;
-      margin: 0;
-      &+p{
-        font-size: .9em;
+      margin: 0 0 15px 0;
+      &+dd{
+        font-size: .7em;
+        line-height: 1em;
+        margin: 0 0 30px 0;
       }
     }
 
-    h3 {
+    dt:nth-of-type(2) {
       font-size: .9em;
       line-height: 1em;
       color: yellow;
-      margin: 0;
-      &+p{
-        font-size: .8em;
-        
+      &+dd{
+        font-size: .4em;
+        line-height: 1.2em;
+        background-color: yellow;
+        border-radius: 2px;
+        padding: 15px;
       }
     }
 
     a {
+      border-bottom: 4px solid $sayColor;
       word-wrap: break-word;
     }
   }
 
-  p {
-    margin: 0;
-    padding: 0 0 25px 0;
-  }
 }
 
 
