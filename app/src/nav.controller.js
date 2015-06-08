@@ -18,11 +18,11 @@
 
 
     function locationSwith(path) {
+      var _path = path;
       if ( path === '/share/' && messageFactory.messageObj.encodedMessage ) {
-        path = path + messageFactory.messageObj.encodedMessage;
+        _path = path + messageFactory.messageObj.encodedMessage;
       }
-      $location.path(path);
-      console.log('msgmsg: '+messageFactory.messageObj.encodedMessage);
+      $location.path(_path);
     }
 
 

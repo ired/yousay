@@ -1,14 +1,13 @@
 <div class="share-wrapper">
   
-  <div class="no_say" ng-hide="share.shareUrl">
+  <div class="no_say" ng-hide="share.messageEncoded">
     <p>Oops, You have no messages to share. <a href="#/new/">Say</a> something.</p>
   </div>
 
   
-  <dl class="share" ng-show="share.shareUrl">
+  <dl class="share" ng-show="share.messageEncoded">
     <dt>You Said:</dt>
     <dd>{{ share.message }}
-    {{ share.messageEncoded }}
     </dd>
     <dt>Link to your message:</dt>
     <dd><a href="{{ share.shareUrl }}">{{ share.shareUrl }}</a> </dd>

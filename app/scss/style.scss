@@ -72,6 +72,7 @@ a {
   padding: 15px;
   color: #fff;
   .description {
+    font-size: 1.2em;
     margin: 0 auto 3.5em auto;
     text-align: center;
     color: #fff;
@@ -153,6 +154,36 @@ a {
   }
 }
 
+.message-wrapper {
+  .icons {
+    text-align: center;
+    margin-top: 90px;
+    width: 50%;
+    svg {
+      //border: 3px solid black;
+      border-radius: 1em;
+      padding: .17em;
+      outline: none;
+    }
+  }
+  .share_icon {
+    float: left;
+    cursor: pointer;
+    svg {
+      fill: #fff;
+      background-color: $shareColor;
+    }
+  }
+  .replay_icon {
+    float: right;
+    cursor: pointer;
+    svg {
+      fill: #fff;
+      background-color: $mainColor;
+    }
+  }
+}
+
 .message {
   text-decoration: none;
   color: #000;
@@ -162,7 +193,7 @@ a {
     color: $mainColor;
     font-size: 1.1em;
   }
-}
+} 
 
 .menu_button {
   background-color: $mainColor;
@@ -261,7 +292,7 @@ a {
       padding: 0;
       margin: 0 0 15px 0;
       &+dd{
-        font-size: .6em;
+        font-size: 1em;
         line-height: 1em;
         margin: 0 0 50px 0;
       }
@@ -284,6 +315,10 @@ a {
       border-bottom: 4px solid $sayColor;
       //word-wrap: break-word;
     }
+  }
+  p {
+    margin:0;
+    padding:0;
   }
 
 }

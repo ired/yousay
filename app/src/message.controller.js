@@ -13,7 +13,7 @@
 
 
     vm.writeNewMessage = writeNewMessage;
-    vm.message = messageFactory.readUrl($routeParams.message) || 'I love hamburgers, and I love you!';
+    vm.message = messageFactory.readUrl($routeParams.message) || 'What is this place?! I love it!';
     vm.reloadView = reloadView;
     vm.inputMessage = '';
 
@@ -23,7 +23,6 @@
     function writeNewMessage() {
       messageFactory.changeUrl(vm.inputMessage);
       messageFactory.saveUrl();
-      console.log('msgmsg1: '+messageFactory.messageObj.encodedMessage);
     }
 
     function reloadView() {

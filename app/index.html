@@ -21,7 +21,7 @@
 <div class="container" ng-controller="NavController as nav">
   <nav snap-drawer>
     <h1 class="logo-h1"><a href ng-click="nav.locationSwith('/')" title="YouSay Home">You Say</a></h1>
-    <p class="description">I like bold thoughts</p>
+    <p class="description" ng-click="nav.locationSwith('/')">I like bold thoughts</p>
     <ul class="menu">
       <li><a href ng-click="nav.locationSwith('/new/')" title="Create new message">Say</a></li>
       <li><a href ng-click="nav.locationSwith('/share/')" title="Share your message">Share</a></li>

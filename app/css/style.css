@@ -49,6 +49,7 @@ a {
   padding: 15px;
   color: #fff; }
   .snap-drawer .description {
+    font-size: 1.2em;
     margin: 0 auto 3.5em auto;
     text-align: center;
     color: #fff; }
@@ -108,6 +109,29 @@ a {
       font-size: 5em;
       top: 55px;
       width: 66.10169%; } }
+
+.message-wrapper .icons {
+  text-align: center;
+  margin-top: 90px;
+  width: 50%; }
+  .message-wrapper .icons svg {
+    border-radius: 1em;
+    padding: .17em;
+    outline: none; }
+
+.message-wrapper .share_icon {
+  float: left;
+  cursor: pointer; }
+  .message-wrapper .share_icon svg {
+    fill: #fff;
+    background-color: #90ba12; }
+
+.message-wrapper .replay_icon {
+  float: right;
+  cursor: pointer; }
+  .message-wrapper .replay_icon svg {
+    fill: #fff;
+    background-color: #f52e6d; }
 
 .message {
   text-decoration: none;
@@ -193,7 +217,7 @@ a {
       padding: 0;
       margin: 0 0 15px 0; }
       .share-wrapper .share dt + dd {
-        font-size: .6em;
+        font-size: 1em;
         line-height: 1em;
         margin: 0 0 50px 0; }
     .share-wrapper .share dt:nth-of-type(2) {
@@ -208,6 +232,9 @@ a {
         padding: 15px; }
     .share-wrapper .share a {
       border-bottom: 4px solid #48a5db; }
+  .share-wrapper p {
+    margin: 0;
+    padding: 0; }
 
 @-webkit-keyframes blink-it {
   0% {

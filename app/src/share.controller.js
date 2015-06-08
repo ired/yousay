@@ -11,10 +11,9 @@
 
     var share = this;
 
+    share.messageEncoded = $routeParams.message || '';
     share.message = messageFactory.messageObj.message || messageFactory.readUrl($routeParams.message);
     share.shareUrl = messageFactory.messageObj.shareUrl || messageFactory.saveUrl($routeParams.message);
 
-    console.log(share.message);
-    console.log(share.shareUrl);
   }
 })();
