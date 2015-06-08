@@ -43,8 +43,8 @@ gulp.task('dist:usemin', ['dist:clean'], function () {
   return gulp.src('app/**/*.html', { base: 'app' } )
       .pipe(usemin({
         css: [  
-                sass({outputStyle: 'compressed'}),
-                uncss({html: ['app/**/*.html'],ignoreSheets:['app/css/normalize.css','app/css/angular-snap.css']}),
+                sass(),
+                //uncss({html: ['app/**/*.html'],ignoreSheets:['app/css/normalize.css','app/css/angular-snap.css']}),
                 csso(),
                 rev()
             ],
@@ -67,8 +67,7 @@ gulp.task('dist:clean', function(cb) {
     var del = require('del');
 
     del([
-        'dist/*',
-        'app/css/**/*'
+        'dist/*'
         ], cb);
 });
 
