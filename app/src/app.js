@@ -8,7 +8,7 @@
         'ab-base64',
         'angularTypewrite',
         'snap',
-        'luegg.directives',
+        'luegg.directives'
     ])
     .config(['$routeProvider', 'snapRemoteProvider',
       function($routeProvider, snapRemoteProvider) {
