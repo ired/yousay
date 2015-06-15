@@ -71,7 +71,7 @@ gulp.task('dist:inline', ['dist:useref'], function() {
 // Copy image assets without modification
 gulp.task('dist:assets', ['dist:clean'], function() {
   
-    var first = gulp.src([
+    var assets = gulp.src([
                       'app/assets/**/*',
                       'app/*',
                       '!app/*.html',
@@ -81,10 +81,11 @@ gulp.task('dist:assets', ['dist:clean'], function() {
                       '!app/scss'
                       ],{base:'app'})
                       .pipe(gulp.dest('dist/')),
-        second = gulp.src(['app/favicons/**/*'],{base:'app/favicons'})
+
+        favicons = gulp.src(['app/favicons/**/*'],{base:'app/favicons'})
                       .pipe(gulp.dest('dist/'));
 
-    return first+second;
+    return assets+favicons;
   });
 
 gulp.task('dist:clean', function(cb) {
