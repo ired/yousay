@@ -49,17 +49,25 @@ a {
   padding: 15px;
   color: #fff; }
 
-.logo-h1 {
-  text-align: center;
-  margin: 20px 0 90px 0; }
-  .logo-h1 > a {
-    border: none; }
-    .logo-h1 > a:link, .logo-h1 > a:visited, .logo-h1 > a:hover, .logo-h1 > a:focus, .logo-h1 > a:active {
-      color: #f52e6d;
-      font-size: 2.5em;
-      line-height: 1em;
-      text-transform: uppercase;
-      text-decoration: none; }
+.logo {
+  margin: 0 0 180px 0; }
+  .logo h1 {
+    text-align: center;
+    font-size: 4.5em;
+    line-height: 1.1em;
+    margin: 0;
+    padding: 0; }
+    .logo h1 > a {
+      border: none; }
+      .logo h1 > a:link, .logo h1 > a:visited, .logo h1 > a:hover, .logo h1 > a:focus, .logo h1 > a:active {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none; }
+  .logo hr {
+    height: 5px;
+    border: 0;
+    margin: -5.1em 0 0 0;
+    background-color: #f52e6d; }
 
 .menu {
   text-align: center;

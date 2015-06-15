@@ -40,7 +40,10 @@
 
 <div class="container" ng-controller="NavController as nav">
   <nav snap-drawer>
-    <h1 class="logo-h1"><a href ng-click="nav.locationSwith('/')" title="YOU SAY Home">You Say</a></h1>
+    <div class="logo">
+      <h1><a href ng-click="nav.locationSwith('/')" title="YOU SAY Home">You Say</a></h1>
+      <hr>
+    </div>
     <ul class="menu">
       <li><a href ng-click="nav.locationSwith('/new/')" title="Create new message">Say</a></li>
       <li><a href ng-click="nav.locationSwith('/share/')" title="Share your message">Share</a></li>

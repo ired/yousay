@@ -73,20 +73,32 @@ a {
   color: #fff;
 }
 
-.logo-h1 {
-  text-align: center;
-  margin: 20px 0 90px 0;
-  //padding-bottom: 15px;
-  > a {
-    border: none;
-    &:link, &:visited, &:hover, &:focus, &:active {
-      color: $mainColor;
-      font-size: 2.5em;
-      line-height: 1em;
-      text-transform: uppercase;
-      text-decoration: none;
+.logo {
+  margin: 0 0 180px 0;
+
+  h1 {
+    text-align: center;
+    font-size: 4.5em;
+    line-height: 1.1em;
+    margin: 0;
+    padding: 0;
+    
+    > a {
+      border: none;
+      &:link, &:visited, &:hover, &:focus, &:active {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
     }
-  } 
+  }
+
+  hr {
+    height: 5px;
+    border: 0;
+    margin: -5.1em 0 0 0;
+    background-color: $mainColor;
+  }
 }
 
 .menu {
