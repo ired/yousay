@@ -65,8 +65,9 @@ a {
         text-decoration: none; }
   .logo hr {
     height: 5px;
+    width: 140px;
     border: 0;
-    margin: -5.1em 0 0 0;
+    margin: -5.1em auto 0 auto;
     background-color: #f52e6d; }
 
 .menu {
