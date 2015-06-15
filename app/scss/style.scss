@@ -74,14 +74,20 @@ a {
 }
 
 .logo {
-  margin: 15px 0 160px 0;
+  // margin: 15px 0 160px 0;
+  margin: 0 auto 65px auto;
+  width: 50%;
+
 
   h1 {
     text-align: center;
-    font-size: 4.5em;
+    // font-size: 4.5em;
+    // line-height: 1.1em;
+    border: 5px solid $mainColor;
+    font-size: 2.7em;
     line-height: 1.1em;
     margin: 0;
-    padding: 0;
+    padding: 5px 0;
     > a {
       border: none;
       &:link, &:visited, &:hover, &:focus, &:active {
@@ -96,9 +102,17 @@ a {
     height: 5px;
     width: 140px;
     border: 0;
-    margin: -5.1em auto 0 auto;
+    margin: -10px auto 0 auto;
     background-color: $mainColor;
   }
+
+  // hr {
+  //   height: 5px;
+  //   width: 140px;
+  //   border: 0;
+  //   margin: -5.1em auto 0 auto;
+  //   background-color: $mainColor;
+  // }
 }
 
 .menu {

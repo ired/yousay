@@ -50,13 +50,15 @@ a {
   color: #fff; }
 
 .logo {
-  margin: 15px 0 160px 0; }
+  margin: 0 auto 65px auto;
+  width: 50%; }
   .logo h1 {
     text-align: center;
-    font-size: 4.5em;
+    border: 5px solid #f52e6d;
+    font-size: 2.7em;
     line-height: 1.1em;
     margin: 0;
-    padding: 0; }
+    padding: 5px 0; }
     .logo h1 > a {
       border: none; }
       .logo h1 > a:link, .logo h1 > a:visited, .logo h1 > a:hover, .logo h1 > a:focus, .logo h1 > a:active {
@@ -67,7 +69,7 @@ a {
     height: 5px;
     width: 140px;
     border: 0;
-    margin: -5.1em auto 0 auto;
+    margin: -10px auto 0 auto;
     background-color: #f52e6d; }
 
 .menu {
