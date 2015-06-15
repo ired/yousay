@@ -42,12 +42,8 @@ gulp.task('dist:useref', ['dist:clean','sass'], function () {
       smoosher = require('gulp-smoosher'),
       csso = require('gulp-csso'),
       MinifyHtml = require('gulp-minify-html'),
-
-      assets = useref.assets(),
-      isJs = 'app/src/**/*.js',
-      isCss = 'app/css/**/*.css',
-      isHtml = 'app/**/*.html';
-
+      
+      assets = useref.assets();
 
   return gulp.src('./app/**/*.html')
     .pipe(assets)
