@@ -43,7 +43,6 @@ gulp.task('dist:useref', ['dist:clean','sass'], function () {
       revReplace = require('gulp-rev-replace'),
       smoosher = require('gulp-smoosher'),
       csso = require('gulp-csso'),
-      MinifyHtml = require('gulp-minify-html'),
 
       assets = useref.assets();
 
@@ -60,8 +59,10 @@ gulp.task('dist:useref', ['dist:clean','sass'], function () {
 
 gulp.task('dist:inline', ['dist:useref'], function() {
   var smoosher = require('gulp-smoosher');
+      //minifyHtml = require('gulp-minify-html');
   return gulp.src('dist/**/*.html')
     .pipe(smoosher())
+    //.pipe(minifyHtml({empty:true}))
     .pipe(gulp.dest('dist/'));
 
 });
