@@ -11,12 +11,13 @@ gulp.task('serve', ['sass'], function() {
   browserSync.init({
       server: "./app",
       open: false,
-      reloadDebounce: 5000
+      reloadDelay: 1000,
+      reloadDebounce: 3000
       // browser: "google chrome beta launcher"
   });
 
   gulp.watch('app/scss/**/*.{scss,sass}', ['sass']);
-  gulp.watch(['app/src/**/*.js', 'app/lib/**/*.js', 'app/**/*.html']).on('change', browserSync.reload);
+  gulp.watch(['app/css/**/*.css', 'app/src/**/*.js', 'app/lib/**/*.js', 'app/**/*.html']).on('change', browserSync.reload);
 });
 
 // Gulp Sass Task 
@@ -30,7 +31,8 @@ gulp.task('sass', function() {
       }))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('app/css'))
-      .pipe(browserSync.reload({stream: true}));
+      // .pipe(browserSync.reload({stream: true}));
+      .pipe(browserSync.stream());
 });
 
 // Gulp assets compilation 
@@ -42,7 +44,7 @@ gulp.task('dist:useref', ['dist:clean','sass'], function () {
       smoosher = require('gulp-smoosher'),
       csso = require('gulp-csso'),
       MinifyHtml = require('gulp-minify-html'),
-      
+
       assets = useref.assets();
 
   return gulp.src('./app/**/*.html')
