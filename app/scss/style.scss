@@ -71,24 +71,20 @@ a {
   background-color: #000;
   padding: 15px;
   color: #fff;
-  .description {
-    font-size: 1.2em;
-    margin: 0 auto 3.5em auto;
-    text-align: center;
-    color: #fff;
-  }
 }
 
 .logo-h1 {
   text-align: center;
-  font-size: 3em;
-  margin: 20px 0 5px 0;
+  margin: 20px 0 90px 0;
   //padding-bottom: 15px;
   > a {
     border: none;
     &:link, &:visited, &:hover, &:focus, &:active {
-      text-decoration: none;
       color: $mainColor;
+      font-size: 2.5em;
+      line-height: 1em;
+      text-transform: uppercase;
+      text-decoration: none;
     }
   } 
 }

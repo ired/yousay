@@ -48,21 +48,18 @@ a {
   background-color: #000;
   padding: 15px;
   color: #fff; }
-  .snap-drawer .description {
-    font-size: 1.2em;
-    margin: 0 auto 3.5em auto;
-    text-align: center;
-    color: #fff; }
 
 .logo-h1 {
   text-align: center;
-  font-size: 3em;
-  margin: 20px 0 5px 0; }
+  margin: 20px 0 90px 0; }
   .logo-h1 > a {
     border: none; }
     .logo-h1 > a:link, .logo-h1 > a:visited, .logo-h1 > a:hover, .logo-h1 > a:focus, .logo-h1 > a:active {
-      text-decoration: none;
-      color: #f52e6d; }
+      color: #f52e6d;
+      font-size: 2.5em;
+      line-height: 1em;
+      text-transform: uppercase;
+      text-decoration: none; }
 
 .menu {
   text-align: center;
