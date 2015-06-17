@@ -40,7 +40,7 @@ snap-drawer,
   -webkit-transition: bottom 0.2s linear;
   transition: bottom 0.2s linear;
   overflow-scrolling: touch;
-  width: 250px; }
+  width: 200px; }
 
 .snap-content {
   z-index: 2;

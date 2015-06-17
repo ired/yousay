@@ -46,7 +46,7 @@
               disable: 'right',
               tapToClose: true,
               addBodyClasses: false,
-              maxPosition: 250
+              maxPosition: 200
             }
 
     }])
