@@ -12,4 +12,4 @@ Simple AngularJS Web App to share messages. The current version online: [Yousay.
 
 - Angular wrapper around Snap.js: [angular-snap.js](https://github.com/jtrussell/angular-snap.js)
 
-
+- Fastclick is a library for eliminating 300ms between physical tap and the firing click event on mobile browsers: [FastClick](https://github.com/ftlabs/fastclick)
