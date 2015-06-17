@@ -51,9 +51,12 @@
 
     }])
     .run(['$rootScope', '$location', 
-      function($rootScope,$location) {
+      function($rootScope, $location) {
         var re = /\w+/i,
             bodyPathClass = [];
+        
+        //fastclick init
+        FastClick.attach(document.body);
 
         $rootScope.$on('$routeChangeSuccess', function(ev, data) {
           bodyPathClass = $location.path().match(re) || ['i'];

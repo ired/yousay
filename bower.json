@@ -20,7 +20,7 @@
     "angular-youtube-mb": "~1.0.2",
     "angular-snap": "~1.8.1",
     "angular-scroll-glue": "~2.0.5",
-    "ng-fastclick": "~1.0.1"
+    "fastclick": "~1.0.6"
   },
   "devDependencies": {
     "angular": "~1.4.0",
